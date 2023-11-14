@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # *Simba*: Batteryfree-node-simulator
-=======
-# Simba: Batteryfree-node-simulator
->>>>>>> 7041bb6 (Initial commit.)
 
 This repo contains the *Simba* simulation framework, including its source code, tools, example simulations, and documentation files.
 
@@ -35,7 +31,6 @@ For more information how to use *Python Interactive mode* in VSCode, see https:/
 
 ### 3) Run fully locally
 
-<<<<<<< HEAD
 To run *Simba* locally (recommend for development and long-term simulations), clone this repo and install the required Python packages as well as the simulation core using:
 ```
 cd <SIMBA_REPO_FOLDER>
@@ -43,6 +38,3 @@ pip3 install --user -r requirements.txt
 pip3 install --user --editable Simba
 ```
 You can now use Simba like any other Python package and we recommend the usage within an IDE (e.g., [Spyder](https://www.spyder-ide.org/) has been proven very convenient).
-=======
-TODO: Description.
->>>>>>> 7041bb6 (Initial commit.)

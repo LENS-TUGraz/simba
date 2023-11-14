@@ -33,15 +33,8 @@ class Simulation:
     def __init__(self, cap_config, harvester_config, converter_config, load_config, log_keys = [], log_triggers = []):
         
         self.min_step_size = 1e-6 #us as timing base
-<<<<<<< HEAD
         self.max_step_size = 1e-3#at least every xxx ms
         
-=======
-        self.precision = int(-np.log10(self.min_step_size))
-        self.max_step_size = 1e-3#at least every xxx ms
-        
-                
->>>>>>> 7041bb6 (Initial commit.)
         self.cap = cap_factory(cap_config, self.min_step_size)
         self.load = load_factory(load_config, self.min_step_size)
         self.harvester = harvester_factory(harvester_config, self.min_step_size)
@@ -55,11 +48,7 @@ class Simulation:
         self.sim_end = int(time_end / self.min_step_size)
         self.max_step = int(self.max_step_size / self.min_step_size)
         
-<<<<<<< HEAD
         self.cap.reset() 
-=======
-        self.cap.reset()     #todo: initial state from settings
->>>>>>> 7041bb6 (Initial commit.)
         self.converter.reset(self.cap.voltage, self.harvester.get_ocv(0))
         self.load.reset(self.converter.get_output_operating_voltage(self.cap.voltage), self.cap.voltage)
         harvester_ocv = self.harvester.get_ocv(0)
@@ -99,10 +88,6 @@ class Simulation:
             # Quiescent currents within the system 
             self.i_leak_converter = self.converter.get_quiescent(self.cap.voltage)
             
-<<<<<<< HEAD
-=======
-            #TODO: remove this one? (move to converter?)
->>>>>>> 7041bb6 (Initial commit.)
             v_in_adjust = (self.v_in / self.v_cap) if self.v_cap > 0 else 1
             v_out_adjust = (self.v_out / self.v_cap) if (self.v_cap > 0) else 1
             self.i_total = self.i_in * v_in_adjust * self.efficiency_in - self.i_out * v_out_adjust / self.efficiency_out - self.i_leak_converter   
@@ -134,11 +119,7 @@ class Simulation:
         self.harvester.process_log(self.time)
        
         
-<<<<<<< HEAD
     #compute time until next update is necessary (i.e., the maximum timestep until the next state change happens in any of the modules)
-=======
-     #compute time until next update is necessary (i.e., the maximum timestep until the next state change happens in any of the modules)
->>>>>>> 7041bb6 (Initial commit.)
     def compute_next_update(self, i):
                  
         #Get next update times from all the system's components
@@ -226,11 +207,7 @@ class Simulation:
 
         return self.log
     
-<<<<<<< HEAD
     
-=======
-# -*- coding: utf-8 -*-
->>>>>>> 7041bb6 (Initial commit.)
 """
 Trade-off exploration tool
 """
@@ -306,10 +283,7 @@ def run_experiment(num, params_to_change, base_config, metrics, settings, mappin
     #print("Start simulation with:")
     #print(params_to_change)
     
-<<<<<<< HEAD
     # Store simulation settings
-=======
->>>>>>> 7041bb6 (Initial commit.)
     timestep = settings['timestep'] if 'timestep' in settings else 1e-3
     store_log_data = settings['store_log_data'] if 'store_log_data' in settings else False
     store_log_path = settings['log_path'] if 'log_path' in settings else '.'
@@ -317,20 +291,13 @@ def run_experiment(num, params_to_change, base_config, metrics, settings, mappin
     
     #print(f"Timestep: {timestep}.")
     #print(f"Store log data: {store_log_data} (@ {store_log_path}).")
-<<<<<<< HEAD
     
     # Create simulation core with base configuration
-=======
->>>>>>> 7041bb6 (Initial commit.)
     sim = Simulation(base_config['capacitor'], base_config['harvester'], base_config['converter'], base_config['load'])
     sim.max_step_size = timestep
     
     result = {}
-<<<<<<< HEAD
     # Adjust parameters in modules accordingly
-=======
-    # Adjust paramters in modules accordingly
->>>>>>> 7041bb6 (Initial commit.)
     for param_to_change in params_to_change:
         try:
             module_to_change = getattr(sim, param_to_change['module'])
@@ -347,11 +314,7 @@ def run_experiment(num, params_to_change, base_config, metrics, settings, mappin
         #add parameter settings to result for later analysis
         result[f"{param_to_change['module']}.{param_to_change['param']}"] = param_to_change['value']
     
-<<<<<<< HEAD
     # Set parameters that are mapped to certain settings if applicable
-=======
-    
->>>>>>> 7041bb6 (Initial commit.)
     for mapping_param in mapping_params:
         module_to_map = getattr(sim, mapping_param['module_to_map'])
         
@@ -369,11 +332,7 @@ def run_experiment(num, params_to_change, base_config, metrics, settings, mappin
             print(f"Cannot change module parameter {mapping_param['module_to_change']}.{mapping_param['param_to_change']} while mapping, as parameter does not exist!")
             return -1 #TODO Error handling
     
-<<<<<<< HEAD
     # Run simulation
-=======
-    
->>>>>>> 7041bb6 (Initial commit.)
     try:
         sim.run(base_config['sim_time'])
     except Exception as e:
@@ -399,12 +358,8 @@ def run_experiment(num, params_to_change, base_config, metrics, settings, mappin
                     result[f"{module_metrics['module']}.{metric}"] = None
     except Exception as e:
         print(e)
-<<<<<<< HEAD
        
     # Store detailed log of simulation to file if requested
-=======
-        
->>>>>>> 7041bb6 (Initial commit.)
     if store_log_data:
         save_log_to_file(store_log_path, num, result, sim)
             
@@ -414,28 +369,20 @@ def run_experiment(num, params_to_change, base_config, metrics, settings, mappin
 def run_tradeoff_exploration(params, metrics, base_config, settings = {}, mapping_params = []):
     result_list = []
     process_results = []
-<<<<<<< HEAD
     
-=======
->>>>>>> 7041bb6 (Initial commit.)
     def log_result(result):
         # This is called whenever foo_pool(i) returns a result.
         # result_list is modified only by the main process, not the pool workers.
         result_list.append(result)
     
     # Decode given parameters to explore accordingly
-<<<<<<< HEAD
     parameter_options = list(product(*params.values())) #Permutate all provided parameters
-=======
-    parameter_options = list(product(*params.values()))
->>>>>>> 7041bb6 (Initial commit.)
     module_list = [key.split(".")[0] for key in params.keys()]
     param_list = [key.split(".")[1] for key in params.keys()]
 
     param_options = []
     for parameters in parameter_options:
         params_to_change = [{'module' : module_list[i], 'param' : param_list[i], 'value' : val} for i, val in enumerate(parameters)]
-<<<<<<< HEAD
         param_options.append(params_to_change)
     
     # Since we have all paramter options, we can now start a simulation for each option
@@ -448,18 +395,6 @@ def run_tradeoff_exploration(params, metrics, base_config, settings = {}, mappin
         process_result = pool.apply_async(run_experiment, args = (num, params_to_change, base_config, metrics, settings, mapping_params), callback=log_result)
         process_results.append(process_result)
     # Close Pool and let all the processes complete    
-=======
-        
-        param_options.append(params_to_change)
-    
-    start = datetime.datetime.now()
-    pool = mp.Pool(min(int(mp.cpu_count()/2), len(param_options)))
-    print(f"Create {min(int(mp.cpu_count()/2), len(param_options))} processes.")
-    for num, params_to_change in enumerate(param_options):
-        process_result = pool.apply_async(run_experiment, args = (num, params_to_change, base_config, metrics, settings, mapping_params), callback=log_result)
-        process_results.append(process_result)
-    # Step 4: Close Pool and let all the processes complete    
->>>>>>> 7041bb6 (Initial commit.)
     pool.close()
     pool.join()  # postpones the execution of next line of code until all processes in the queue are done.
     

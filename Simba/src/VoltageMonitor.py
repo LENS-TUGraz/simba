@@ -1,14 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-<<<<<<< HEAD
 Helper class: Voltage monitor 
 
 Trigger events if (registered) voltage thresholds are crossed.
-=======
-Created on Tue Jan 31 09:50:24 2023
-
-@author: hannib
->>>>>>> 7041bb6 (Initial commit.)
 """
 
 	

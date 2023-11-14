@@ -2,13 +2,8 @@
 
 from bisect import bisect_left
 
-<<<<<<< HEAD
-
 #https://stackoverflow.com/a/12141511
 
-=======
-#https://stackoverflow.com/a/12141511
->>>>>>> 7041bb6 (Initial commit.)
 def take_closest(myList, myNumber, returnIndex=False):
     """
     Assumes myList is sorted. Returns closest value to myNumber.
