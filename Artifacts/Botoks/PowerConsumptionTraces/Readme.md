@@ -1,0 +1,1 @@
+Obtained using STMCubeMonitor Power -- to view the traces install corresponding program from STM website.
