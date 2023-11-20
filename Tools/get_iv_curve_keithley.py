@@ -10,7 +10,7 @@ import pandas as pd
 from pymeasure.instruments.keithley import Keithley2450
 
 # Specify sourcemeter source, the desired name of your solarpanel and the applied illuminance.
-sourcemeter = Keithley2450('USB0::0x05E6::0x2450::04456242::0::INSTR')
+sourcemeter = Keithley2450('USB0::0x05E6::0x2450::04456242::0::INSTR') #Adjust accordingly
 panel= 'Gameboy'
 lux = 300
 filename = f'{panel}_lux{lux}.json'
@@ -18,10 +18,10 @@ voltage_steps = 0.05
 
 #%% Measure open circuit voltage first
 
-sourcemeter.source_current = 0              # Set voltage
+sourcemeter.source_current = 0           # Set voltage
 sourcemeter.apply_current(None, 10)      # Sets the compliance voltage to 3.5 V
-sourcemeter.enable_source()                         # Enables the source output
-time.sleep(1)                                       # Let the node start
+sourcemeter.enable_source()              # Enables the source output
+time.sleep(1)                            # Let the node start
 
 sourcemeter.measure_voltage()
 print(f"Voc: {sourcemeter.voltage}")
@@ -40,12 +40,10 @@ sourcemeter.current_range = current_limit
 sourcemeter.enable_source()                         # Enables the source output
 
 time.sleep(1)                                       # Let the node start
-
 sourcemeter.measure_current(current=current_limit, auto_range=False)
 
 #Disable and move on to next current
 sourcemeter.disable_source()
-
 
 #Let's get the curve and store it
 iv = {}
