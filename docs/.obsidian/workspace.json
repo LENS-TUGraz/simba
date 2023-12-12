@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "f4ddccdc5c10d64a",
+    "type": "split",
+    "children": [
+      {
+        "id": "96ec2ec6e56af47b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "744da360eff38c8f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Description/Trade-off exploration.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a979f65ba71fac38",
+    "type": "split",
+    "children": [
+      {
+        "id": "00a5f6bf1f48336a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69133b3c9905556c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f59393b0fac6ec34",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4e6569171f0e57d4",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "6ff12096cd0d38ef",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3ef2ecf47c57c5c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "80303bc51e82f782",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47d68191de2e176e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Description/Trade-off exploration.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "38fa93a6b0d4036a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Description/Trade-off exploration.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9a522ac3b0283dc8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ed2d0d4f6e9bb5fb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Description/Trade-off exploration.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "69133b3c9905556c",
+  "lastOpenFiles": [
+    "Figures/tmp",
+    "Figures/New folder",
+    "index.md",
+    "Description/Trade-off exploration.md",
+    "Description/Simulation principle.md",
+    "Description/Module implementations.md",
+    "Description/Implementation details.md",
+    "Module implementations/Capacitors/IdealCapacitor.md",
+    "Module implementations/Converters/BuckBoost.md",
+    "Module implementations/Converters/BQ25570.md",
+    "Module implementations/Capacitors/TantulumCapacitor.md",
+    "Module implementations/Converters/Diode (converter-less).md",
+    "Module implementations/Converters/LDO.md",
+    "Module implementations/Harvesters/Artificial.md",
+    "Module implementations/Harvesters/IVCurve.md",
+    "Module implementations/Harvesters/SolarPanel.md",
+    "Module implementations/Harvesters/TEG.md",
+    "Module implementations/Loads/ConstantLoad.md",
+    "Module implementations/Loads/JITLoad.md",
+    "Module implementations/Loads/JITLoadAdvanced.md",
+    "Module implementations/Loads/TaskLoad.md",
+    "Figures/Tradeoff-Exploration.png",
+    "Figures/Tradeoff-Exploration.emf",
+    "Figures/~$Tradeoff-Exploration.pptx",
+    "Figures/ppt7F8D.tmp",
+    "Figures/ppt5E95.tmp",
+    "Figures/Tradeoff-Exploration.pdf",
+    "Figures/mso4B2F.tmp",
+    "Figures/Tradeoff-Exploration.pptx",
+    "Figures/~$Figures.pptx",
+    "Module.md",
+    "Simulation.md",
+    "Module implementations/Artificial.md",
+    "Module implementations/Loads.md",
+    "Module implementations/Converters.md",
+    "Module implementations/Harvesters.md",
+    "Module implementations/New Text Document.txt",
+    "Figures/Architecture.PNG",
+    "Figures/ArchitectureOld.PNG",
+    "Figures/TaskLoad.PNG",
+    "Figures/Simulation.PNG",
+    "Figures/JITLoad.PNG",
+    "Figures/Example1b.png",
+    "Figures/Example1a.png",
+    "Figures/Battery-Free-Node-Interactions.png",
+    "Untitled.canvas",
+    "Figures/JITCapvoltage.PNG"
+  ]
+}

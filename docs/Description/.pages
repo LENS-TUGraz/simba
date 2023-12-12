@@ -1,0 +1,5 @@
+nav:
+    - Simulation principle.md
+    - Implementation details.md
+    - Module implementations.md
+    - Trade-off exploration.md
