@@ -1,10 +1,13 @@
 site_name: Simba
 site_url: https://simbaframework.github.io/simba/
-site_dir: public
+site_description: Documentation of Simba simulator
 
 theme:
-    name: material
+    name: 'material'
     
+    palette:
+       scheme: default
+
     features:
     # - announce.dismiss
     - content.code.annotate
@@ -17,33 +20,13 @@ theme:
     # - navigation.prune
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
+    #- navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
-    
-    palette:
-
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: pink
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: pink
-      accent: blue
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
 
 #Extensions
 markdown_extensions:
