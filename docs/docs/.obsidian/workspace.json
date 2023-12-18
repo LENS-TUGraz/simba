@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Description/Trade-off exploration.md",
+                "file": "Module implementations/Harvesters/IVCurve.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Description/Trade-off exploration.md",
+                "file": "Module implementations/Harvesters/IVCurve.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Description/Trade-off exploration.md",
+                "file": "Module implementations/Harvesters/IVCurve.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Description/Trade-off exploration.md"
+                "file": "Module implementations/Harvesters/IVCurve.md"
               }
             }
           }
@@ -155,22 +155,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "69133b3c9905556c",
+  "active": "744da360eff38c8f",
   "lastOpenFiles": [
-    "Figures/tmp",
-    "Figures/New folder",
-    "index.md",
+    "docs",
+    "New folder",
+    "requirements.txt",
+    "New Text Document.txt",
+    "mkdocs.yml",
+    "Module implementations/Harvesters/Artificial.md",
+    "Module implementations/Converters/BQ25570.md",
+    "Module implementations/Capacitors/TantulumCapacitor.md",
+    "Module implementations/Capacitors/IdealCapacitor.md",
+    "Figures/Architecture.PNG",
     "Description/Trade-off exploration.md",
     "Description/Simulation principle.md",
     "Description/Module implementations.md",
     "Description/Implementation details.md",
-    "Module implementations/Capacitors/IdealCapacitor.md",
+    "Figures/tmp",
+    "Figures/New folder",
+    "index.md",
     "Module implementations/Converters/BuckBoost.md",
-    "Module implementations/Converters/BQ25570.md",
-    "Module implementations/Capacitors/TantulumCapacitor.md",
     "Module implementations/Converters/Diode (converter-less).md",
     "Module implementations/Converters/LDO.md",
-    "Module implementations/Harvesters/Artificial.md",
     "Module implementations/Harvesters/IVCurve.md",
     "Module implementations/Harvesters/SolarPanel.md",
     "Module implementations/Harvesters/TEG.md",
@@ -183,18 +189,12 @@
     "Figures/~$Tradeoff-Exploration.pptx",
     "Figures/ppt7F8D.tmp",
     "Figures/ppt5E95.tmp",
-    "Figures/Tradeoff-Exploration.pdf",
-    "Figures/mso4B2F.tmp",
-    "Figures/Tradeoff-Exploration.pptx",
-    "Figures/~$Figures.pptx",
     "Module.md",
     "Simulation.md",
     "Module implementations/Artificial.md",
     "Module implementations/Loads.md",
     "Module implementations/Converters.md",
     "Module implementations/Harvesters.md",
-    "Module implementations/New Text Document.txt",
-    "Figures/Architecture.PNG",
     "Figures/ArchitectureOld.PNG",
     "Figures/TaskLoad.PNG",
     "Figures/Simulation.PNG",

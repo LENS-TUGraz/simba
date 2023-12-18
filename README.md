@@ -6,6 +6,16 @@ This repo contains the *Simba* simulation framework, including its source code, 
 This repo is still in progress, but already contains a complete and working version of the Simba simulation framework along with several example simulations.
 The repo will be extended (e.g., with docu and more examples etc.) throughout the next weeks.
 
+### Folder structure
+
+| **Folder** | **Description** |
+|---|---|
+| Artifacts | Measured data from evaluation experiments |
+| Simba | Simba simulation core and module implementations |
+| Simulations | Example simulations and simulations from paper |
+| Tools | Tools and utilities |
+| docs | Simba's documentation source files |
+
 ## Using *Simba*
 
 To use the simulation framework, use one of the following installation methods:
@@ -29,7 +39,7 @@ You can also directly click the badge above or [here](https://vscode.dev/redirec
 
 #### Using *Simba* in VSCode
 
-Once the Devcointainer is installed, VSCode offers an convenient way to use *Simba* using its *Jupyter* extension and *Interactive Python mode*. This extension is installed automatically the Devcontainer.
+Once the Devcointainer is installed, VSCode offers an convenient way to use *Simba* using its *Jupyter* extension and *Interactive Python mode*. This extension is installed automatically in the Devcontainer.
 To run a simulation, open the corresponding simulation file in VSCode (e.g., *Simulations/sim_examples_iin_capsize.py*), press `Strg + Shift + P` and select `Jupyter: Run All Cells`.
 VSCode will then execute your python code, display plots, show variables content etc. 
 For more information how to use *Python Interactive mode* in VSCode, see https://code.visualstudio.com/docs/python/jupyter-support-py.
@@ -42,4 +52,4 @@ cd <SIMBA_REPO_FOLDER>
 pip3 install --user -r requirements.txt
 pip3 install --user --editable Simba
 ```
-You can now use Simba like any other Python package and we recommend the usage within an IDE (e.g., [Spyder](https://www.spyder-ide.org/) has been proven very convenient).
+You can now use Simba like any other Python package and we recommend the usage within an IDE (e.g., [Spyder](https://www.spyder-ide.org/) has proven to be very convenient).

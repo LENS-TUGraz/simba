@@ -4,7 +4,15 @@ Converter module implementation:
 
 BQ25570
 
-TODO: description
+The `BQ25570` module models [TI BQ25570](https://www.ti.com/lit/ds/symlink/bq25570.pdf) ultra-low power energy harvesting chip. 
+The BQ25570 embeds a boost charger and MPPT logic, that allows to efficiently extract energy from 
+low-power energy harvesters (from voltages as low as 100 mV). 
+It further offers a buck converter to provide a constant (programmable) output power to the load 
+and provides a hysteresis behavior using its "Battery-Good Output Flag" 
+to turn on/off the output at specific voltage thresholds.
+
+This model embeds look-up tables of the converter's efficiencies at different operating points and input/output currents 
+and implements the chip's MPPT mechanism (i.e., `Vin = MPP_ratio * Vcap`).  
 """
 
 import pandas as pd

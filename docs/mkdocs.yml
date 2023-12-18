@@ -1,11 +1,10 @@
 site_name: Simba
-site_url: https://simbaframework.github.io/simba/
-site_description: Documentation of Simba simulator
-docs_dir: ./docs/docs
+site_dir: private
+docs_dir: ./docs
 
 theme:
     name: 'material'
-    
+
     palette:
    # Palette toggle for light mode
     - scheme: default
@@ -21,6 +20,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+        
     features:
     # - announce.dismiss
     - content.code.annotate

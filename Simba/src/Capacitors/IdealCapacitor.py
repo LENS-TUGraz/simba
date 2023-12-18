@@ -3,6 +3,9 @@
 Capacitor module implementation:
 
 IdealCapacitor
+
+The `IdealCapacitor` module describes an ideal capacitor (i.e., with no leakage)
+with a certain capacitance and voltage rating.
 """
 
 from enum import Enum

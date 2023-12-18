@@ -4,16 +4,16 @@ Converter module implementation:
 
 Diode
 
-TODO: description
+The `Diode` module describes an (ideal) converter-less node architecture 
+where energy harvester, capacitor, and load are *directly coupled* (i.e., `Vin = Vcap` and `Vout = Vcap`). 
+Typically, a diode is used in this settings to avoid a backfeeding of the capacitor's energy to the harvester. 
+Note that in this model, no diode voltage drop is considered.
+This model also implements an overvoltage protection of the capacitor, 
+i.e., the input efficiency is set to 0 if `Vcap` > `v_ov`. 
+Otherwise, the input/output efficiencies are set to 100% and no losses are considered (`Ein = Eout = 1`).
 """
 
 import pandas as pd
-from enum import Enum
-import os
-import numpy as np
-from bisect import bisect_right
-import sys
-from Helper import take_closest
 from VoltageMonitor import VoltageMonitor
 
 class Diode:
@@ -27,7 +27,6 @@ class Diode:
         self.i_quiescent = config['i_quiescent'] if 'i_quiescent' in config else 0
         self.voltage_monitor = VoltageMonitor([])
         
-    
     def reset(self, cap_voltage, harvester_ocv): #todo: logging
         pass 
     

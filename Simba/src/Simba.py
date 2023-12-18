@@ -33,7 +33,7 @@ class Simulation:
     def __init__(self, cap_config, harvester_config, converter_config, load_config, log_keys = [], log_triggers = []):
         
         self.min_step_size = 1e-6 #us as timing base
-        self.max_step_size = 1e-3#at least every xxx ms
+        self.max_step_size = 1e-3 #at least every xxx s
         
         self.cap = cap_factory(cap_config, self.min_step_size)
         self.load = load_factory(load_config, self.min_step_size)
@@ -101,12 +101,11 @@ class Simulation:
              
             # update and log
             self.harvester.update_state(next_time, self.dt, self.v_in) 
-            self.cap.update_state(self.time, self.dt, self.i_total) #todo: consider voltage of panel/converter at storage element!
+            self.cap.update_state(self.time, self.dt, self.i_total) 
             self.converter.update_state(next_time, self.dt, self.cap.voltage) #might be necessary for bq255xx etc.
             if self.load.update_state(next_time, self.dt, self.converter.get_output_operating_voltage(self.cap.voltage), self.cap.voltage) == 'FORCE_OFF':
-                self.converter.turn_off(self.cap.voltage)
-          #  self.harvester.update_state(next_time, self.dt, self.converter.get_input_operating_voltage(self.cap.voltage, self.harvester.get_ocv(self.time), next_time))
-                        
+                self.converter.turn_off(self.cap.voltage) #if load asks for a 'self-shutoff', the converter has to serve this
+                
             self.time = next_time       
                 
         if VERBOSE:

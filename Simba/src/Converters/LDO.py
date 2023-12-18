@@ -4,16 +4,16 @@ Converter module implementation:
 
 LDO
 
-TODO: description
+The `LDO` module describes a converter structure, where a *linear low-dropout regulator* is placed 
+between capacitor and load to convert the capacitor voltage to a fixed output voltage (i.e., `Vout = X`) 
+by dissipating the difference between input/output voltage as waste heat (i.e., `Eout = Vout/Vcap`). 
+In this configuration, there is no converter between harvester and capacitor (i.e., `Vin = Vcap`, `Ein = 1`). 
+
+Additionally, this converter module can optionally model a *hysteresis behavior*, 
+where the output is switches on/off at pre-defined voltage thresholds.
 """
 
 import pandas as pd
-from enum import Enum
-import os
-import numpy as np
-from bisect import bisect_right
-import sys
-from Helper import take_closest
 from VoltageMonitor import VoltageMonitor
 
 class LDO:
@@ -31,7 +31,7 @@ class LDO:
         self.i_quiescent = config['i_quiescent'] if 'i_quiescent' in config else 0
         self.i_quiescent_off = config['i_quiescent_off'] if 'i_quiescent_off' in config else self.i_quiescent
         
-        if 'enable_hyst' in config:
+        if 'enable_hyst' in config and config['enable_hyst'] == True:
             self.hysteresis = True
             self.v_high = config['v_high']
             self.v_low = config['v_low']

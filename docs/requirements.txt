@@ -1,0 +1,5 @@
+mkdocs-material
+mkdocs-roamlinks-plugin
+mkdocs-awesome-pages-plugin
+mkdocs-glightbox
+python-markdown-math
