@@ -161,7 +161,7 @@ if PLOT_EXPERIMENTAL_DATAPOINTS:
                     error['error_num_packets'] = None
                 errors = pd.concat([errors, pd.DataFrame(error, index=[0])], ignore_index=True)
     
-        #%%  Print simulation errors
+        #  Print simulation errors
         print("Simulation errors:")
         print(f"Mean off time: {abs(errors).mean().error_off_time:.3f} (mean) / {abs(errors).min().error_off_time:.3f} (min) / {abs(errors).max().error_off_time:.3f} (max)")
         print(f"Num packets: {abs(errors).mean().error_num_packets:.3f} (mean)/ {abs(errors).min().error_num_packets:.3f}  (min) / {abs(errors).max().error_num_packets:.3f} (max)")

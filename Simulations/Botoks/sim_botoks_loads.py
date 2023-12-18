@@ -127,7 +127,7 @@ if PLOT_EXPERIMENTAL_DATAPOINTS:
                     m_stats['load'] = load['name']
                     measured_stats = pd.concat([measured_stats, pd.DataFrame(m_stats, index=[0])], ignore_index=True)
                 
-        #% Print simulation errors for each load type (and overall errors)
+        # Print simulation errors for each load type (and overall errors)
         
         errors_loop = errors[errors.load == 'Load_Loop'][['error_sample_time', 'error_num_packets', 'error_sample_time_max']]
         print("Simulation errors loop:")
@@ -161,21 +161,21 @@ labelsize=9
 
 fig, axs = plt.subplots(nrows = 3, sharex = True, figsize=(3.5,3.1))
 
-stats.pivot("current", "load", "energy_wasted_rel").plot(kind='bar', ax=axs[0], legend=False, color=colors)
+stats.pivot(index="current", columns="load", values="energy_wasted_rel").plot(kind='bar', ax=axs[0], legend=False, color=colors)
 #axs[0].set_title('Wasted energy (%)', fontsize=labelsize)
 axs[0].set_ylabel("$\\frac{E_{Wasted}}{E_{Total}}$(%)", fontsize=labelsize+1, labelpad=2)
 axs[0].tick_params(axis='both', which='major', pad=2, labelsize=labelsize)
 
-# df.pivot("current", "load", "time_between_SEND_mean").plot(kind='bar', ax=axs[1], legend=False, color=colors)
+# df.pivot(index="current", columns="load", values="time_between_SEND_mean").plot(kind='bar', ax=axs[1], legend=False, color=colors)
 # axs[1].set_title('Time between samples mean (s)', fontsize=labelsize)
 # axs[1].set_ylabel('avg($T_{Sample}$)\n(s)', fontsize=labelsize)
 
-stats.pivot("current", "load", "time_between_SEND_max").plot(kind='bar', ax=axs[1], legend=False, color=colors)
+stats.pivot(index="current", columns="load", values="time_between_SEND_max").plot(kind='bar', ax=axs[1], legend=False, color=colors)
 #axs[1].set_title('Maximum time between samples (s)', fontsize=labelsize)
 axs[1].set_ylabel('$T_{Sample,max}$(s)', fontsize=labelsize, labelpad=2)
 axs[1].tick_params(axis='both', which='major', pad=2, labelsize=labelsize)
 
-stats.pivot("current", "load", "num_success_SEND").plot(kind='bar', ax=axs[2], legend=False, color=colors)
+stats.pivot(index="current", columns="load", values="num_success_SEND").plot(kind='bar', ax=axs[2], legend=False, color=colors)
 #axs[2].set_title('#Sucessful packets', fontsize=labelsize)
 axs[2].set_ylabel('#Packets', fontsize=labelsize, labelpad=2)
 axs[2].tick_params(axis='both', which='major', pad=2, labelsize=labelsize)
@@ -186,8 +186,8 @@ if PLOT_EXPERIMENTAL_DATAPOINTS:
         
         ticks = [t + offset for t in axs[2].get_xticks()]
         #axs[1].plot(ticks, df_m[df_m.load == l].sort_values('current').reset_index(drop=True)['MeanTimeSample'], marker='x', linestyle='None', color='black')    
-        axs[1].plot(ticks, measured_stats[measured_stats.load == l].sort_values('current').reset_index(drop=True)['MaxTimeSample'], marker='x', linestyle='None', color='black')
-        axs[2].plot(ticks, measured_stats[measured_stats.load == l].sort_values('current').reset_index(drop=True)['NumSamples'], marker='x', linestyle='None', color='black')
+        axs[1].plot(ticks, measured_stats[measured_stats.load == l].sort_values('current').reset_index(drop=True)['MaxTimeSample'].values, marker='x', linestyle='None', color='black')
+        axs[2].plot(ticks, measured_stats[measured_stats.load == l].sort_values('current').reset_index(drop=True)['NumSamples'].values, marker='x', linestyle='None', color='black')
 
 # Add legend
 h, l = axs[2].get_legend_handles_labels()

@@ -4,13 +4,12 @@ Harvester module implementation:
 
 Artificial source
 
-TODO: description
+The `Artificial` energy source can supply current either constantly or as a sine/square wave 
+(more waveforms can be implemented on demand) with adjustable current amplitude and duty cycle.
 """
 
 import pandas as pd
 import numpy as np
-import json
-import matplotlib.pyplot as plt
 import math
             
 class Artificial:
@@ -24,7 +23,7 @@ class Artificial:
         self.time_max = math.inf
         self.v_oc = config['v_oc'] if 'v_oc' in config else 5
         self.v_ov = config['v_ov'] if 'v_ov' in config else 5
-        self.log_full = config['log'] if 'log' in config else True
+        self.log_full = config['log'] if 'log' in config else False
         
         if config['shape'] == 'const':
             self.i_high = config['i_high']

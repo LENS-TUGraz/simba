@@ -110,7 +110,6 @@ if __name__ == '__main__':
     result = pd.DataFrame(result)
     result.to_json("Result.json") #store if we want to use it later without simulating
     
-    #%%
     result = pd.read_json("Result.json")
     r = result.copy()
     r = r.rename({'cap.capacitance' : 'cap', 'converter.v_out_enable_treshold_high' : 'vhigh', 'load.forward_progress' : 'forward_progress', 'load.time_unavailable_mean' : 't_unav_mean', 'load.time_unavailable_max' : 't_unav_max', 'load.time_available_mean' : 't_av_mean', 'load.time_available_max' : 't_av_max', 'load.time_available_min' : 't_av_min'}, axis=1)

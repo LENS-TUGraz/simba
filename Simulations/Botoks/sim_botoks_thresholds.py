@@ -138,7 +138,7 @@ if PLOT_EXPERIMENTAL_DATAPOINTS:
                 measured_stats = pd.concat([measured_stats, m_stats], ignore_index=True)
     
                 
-        #%% Print simulation errors for each solar panel type (and overall errors)
+        # Print simulation errors for each solar panel type (and overall errors)
         
         errors_print = errors[errors.error_num_packets < 1][['error_sample_time', 'error_num_packets', 'error_sample_time_max']]
         print("Simulation errors total:")
@@ -163,8 +163,8 @@ panel_plots = {'KXOB25-02-X8F' : [22, 47, 100, 200],
                'AM1417' : [47, 100, 200]}
 
 #stats_solar[(stats_solar.panel == panel) & (stats_solar.cap.isin(panel_plots[panel]))].pivot(["cap", "v_high"], "lux", "time_off_mean").plot(kind='bar', ax=axs[0], color=colors, legend = False,zorder=1)
-stats_solar[(stats_solar.panel == panel)].pivot(["cap", "v_high"], "lux", "num_success_SEND").plot(kind='bar', ax=axs[0], ylabel='# Packets', color=colors, legend = False,zorder=1)
-stats_solar[(stats_solar.panel == panel)].pivot(["cap", "v_high"], "lux", "energy_harvested_mj").plot(kind='bar', ax=axs[1], ylabel='$E_{Harvested}$ (J)', color=colors, legend = False, zorder=1)
+stats_solar[(stats_solar.panel == panel)].pivot(index=["cap", "v_high"], columns="lux", values="num_success_SEND").plot(kind='bar', ax=axs[0], ylabel='# Packets', color=colors, legend = False,zorder=1)
+stats_solar[(stats_solar.panel == panel)].pivot(index=["cap", "v_high"], columns="lux", values="energy_harvested_mj").plot(kind='bar', ax=axs[1], ylabel='$E_{Harvested}$ (J)', color=colors, legend = False, zorder=1)
 
 if PLOT_EXPERIMENTAL_DATAPOINTS:
     df_m = measured_stats[(measured_stats.panel == panel) & (measured_stats.cap.isin(panel_plots[panel]))].sort_values('lux')
@@ -172,11 +172,11 @@ if PLOT_EXPERIMENTAL_DATAPOINTS:
     for l, offset in zip(df_m.lux.unique(), [-3/16, -1/16, 1/16, 3/16]):
     
         ticks = [t + offset for t in axs[0].get_xticks()]
-        axs[0].plot(ticks, df_m[df_m.lux == l].sort_values('cap').reset_index(drop=True)['NumSamples'], marker='x', linestyle='None', color='black')    
+        axs[0].plot(ticks, df_m[df_m.lux == l].sort_values('cap').reset_index(drop=True)['NumSamples'].values, marker='x', linestyle='None', color='black')    
         #axs[1].plot(ticks, measured_stats[measured_stats.load == l].sort_values('current').reset_index(drop=True)['MaxTimeSample'], marker='x', linestyle='None', color='black')
         #axs[1].plot(ticks, df_m[df_m.lux == l].sort_values('cap').reset_index(drop=True)['NumSamples'], marker='x', linestyle='None', color='black')
     #Plot outlier in red
-    axs[0].plot(1-3/16, df_m[(df_m.lux == 13000) & (df_m.cap == 47)]['NumSamples'], marker='x', linestyle='None', color='red')
+    axs[0].plot(1-3/16, df_m[(df_m.lux == 13000) & (df_m.cap == 47)]['NumSamples'].values, marker='x', linestyle='None', color='red')
 
 axs[0].set_ylabel('# Packets',fontsize=labelsize, labelpad=0)
 axs[1].set_ylabel('$E_{Harvested}$ (mJ)',fontsize=labelsize, labelpad=0)

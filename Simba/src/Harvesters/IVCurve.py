@@ -4,12 +4,16 @@ Harvester module implementation:
 
 IV Curve
 
-TODO: description
+The `IVCurve` module contains the IV curve of a energy harvester at the certain environmental condition 
+(e.g., for solar panel this means a single IV-curve at a certain brightness). 
+This module thus allows to incorporate the non-linear behavior of many harvesters into the simulation. 
+
+The IV-curves are stored in *Harvesters/harvesting_data/IVCurves* as `.json`-Files. To add new IV-Curves, 
+see *Tools/get_iv_curve_XXXX.py* and the corresponding Readme.
 """
 
 import pandas as pd
 import numpy as np
-import json
 import matplotlib.pyplot as plt
 import math
 import inspect
