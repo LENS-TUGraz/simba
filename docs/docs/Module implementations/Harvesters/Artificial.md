@@ -10,7 +10,8 @@ The `Artificial` energy source can supply current either constantly or as a sine
 |     `i_low`     |     m\*        |     Current in A         | Value of low phase (`square` only)                                                                               |
 |     `t_high`    |     m\*        |     Time in seconds      |  Length of high phase (`square` only)                                                                                      |
 |     `t_low`     |     m\*        |     Time in seconds      | Length of low phase (`square` only)    
-| `period` | m** | Time in seconds |  Period of sine wave (`sine` only)  
+| `period` | m** | Time in seconds |  Period of sine wave (`sine` only)  | 
+|     `log`     |     o         |    Boolean   | Define whether logging is enabled (Default: `False`)  |
 
 \*Mandatory for `square` shape \** Mandatory for `sine` shape
 ### Example configuration(s)

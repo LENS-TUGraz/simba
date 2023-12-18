@@ -1,8 +1,33 @@
 Module implementations describe the (real-world) hardware components (i.e., harvester, load, converter, or capacitor) and can - for example - contain simple mathematical representations of (ideal) components, complex analytical models, or  data sets from experimental campaigns.
 To define and use a certain module implementation, the module-specific [[Module implementations#Module interfaces\|interfaces]] have to be implemented and the desired module has to be [[Module implementations#Configuration\|configured]] accordingly.
+
+## Available module implementations
+
+*Simba* provides a number of pre-defined module implementations which can be configured individually and thus already cover a large number of different battery-free systems.
+
+| **Module**       | **ModuleTypes**       |
+|------------------|--------------------------|
+| Harvesters | [[Artificial]], [[IVCurve]], [[SolarPanel]], [[TEG]]  |
+| Converter  | [[Diode (converter-less)]], [[BuckBoost]], [[LDO]], [[BQ25570]]       | 
+| Capacitor  | [[IdealCapacitor]], [[TantulumCapacitor]]| 
+| Load       | [[ConstantLoad]], [[TaskLoad]], [[JITLoad]], [[JITLoadAdvanced]] | 
+
+## Configuration
+
+To select the desired module implementation, each module (i.e., Harvester, Converter, Capacitor etc.) can be configured using a dedicated configuration (file) in `.json` format as follows:
+
+```
+{
+  "type": "<ModuleType>",
+  "settings" : "<ModuleSettings>"
+}
+```
+
+*<ModuleType\>* is the name of the subtype/implementation of the module and *<ModuleSettings\>*  contain module-specific settings. For module-specific settings, check out the description of each module implementation.
+
 ## Module interfaces
 
-In order to create a *Simba*-compatible module implementation, a number of methods have to implemented accordingly. This include *common methods* that are called for all modules (e.g., `reset`, `update_state` etc.) and *module-specific methods* that are only required for a certain type of module (e.g., `get_input_efficiency` is certainly only required for the converter module).
+In order to create a new *Simba*-compatible module implementation, a number of methods have to implemented accordingly. This include *common methods* that are called for all modules (e.g., `reset`, `update_state` etc.) and *module-specific methods* that are only required for a certain type of module (e.g., `get_input_efficiency` is certainly only required for the converter module).
 
 In the following, we briefly describe the mandatory common and module-specific methods for each module type.
 ### Common methods
@@ -61,7 +86,6 @@ The `Capacitor` modules describe the energy buffer between harvester and load.
 
 - `get_voltage()`: Provide the current voltage of the capacitor.
 
-
 ### Load-specific methods
 
 The `Load` modules represent the load (e.g., sensor node) to be powered by the harvester and capacitor. Note that the load module must include/model the power consumption of both the MCU and any peripherals attached to it.
@@ -76,25 +100,3 @@ The `Load` modules represent the load (e.g., sensor node) to be powered by the h
 
 - `get_current(v_out)`: Return the load's current consumption in the current state.
 - `get_state()`: Return the load's current internal state (for logging purposes only).
-
-## Configuration
-
-To select the desired module implementation, each module (i.e., Harvester, Converter, Capacitor etc.) can be configured using a dedicated configuration (file) in `.json` format as follows:
-
-```
-{
-  "type": "<ModuleType>",
-  "settings" : "<ModuleSettings>"
-}
-```
-
-*<ModuleType\>* is the name of the subtype/implementation of the module and *<ModuleSettings\>*  contain module-specific settings. For module-specific settings, check out the description of each module implementation.
-## Available module implementations
-
-| **Module**       | **ModuleTypes**       |
-|------------------|--------------------------|
-| Harvesters | [[Artificial]], [[IVCurve]], [[SolarPanel]], [[TEG]]  |
-| Converter  | [[Diode (converter-less)]], [[BuckBoost]], [[LDO]], [[BQ25570]]       | 
-| Capacitor  | [[IdealCapacitor]], [[TantulumCapacitor]]| 
-| Load       | [[ConstantLoad]], [[TaskLoad]], [[JITLoad]], [[JITLoadAdvanced]] | 
-
