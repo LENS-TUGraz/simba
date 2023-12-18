@@ -16,6 +16,9 @@ The repo will be extended (e.g., with docu and more examples etc.) throughout th
 | Tools | Tools and utilities |
 | docs | Simba's documentation source files |
 
+## Documentation
+More details about the implementation and the available modules can be found in *Simba*'s documentation at: https://simbaframework.github.io/simba/
+
 ## Using *Simba*
 
 To use the simulation framework, use one of the following installation methods:
