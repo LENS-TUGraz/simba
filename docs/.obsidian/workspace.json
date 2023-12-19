@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "082c1be628f6b847",
+    "type": "split",
+    "children": [
+      {
+        "id": "543e5bc00481168b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4843b822cdb73c5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Module implementations/Harvesters/SolarPanel.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "361ecec8ed80d9e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "575ede921508d8ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bba1db1c4ae1bc4a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3c4f79e20692ed6b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "82a5050cd417edaa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c34c4e7b3e7a1246",
+    "type": "split",
+    "children": [
+      {
+        "id": "0dcee20805e96405",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d7bc6ec58f45476",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Module implementations/Harvesters/SolarPanel.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "246a1a32e720e56b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/Module implementations/Harvesters/SolarPanel.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "72f63c464e3f5b4e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "91e546700c117fff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/Module implementations/Harvesters/SolarPanel.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4843b822cdb73c5d",
+  "lastOpenFiles": [
+    "docs/Module implementations/Harvesters/IVCurve.md",
+    "docs/Module implementations/Harvesters/TEG.md",
+    "docs/Module implementations/Harvesters/SolarPanel.md",
+    "docs/Module implementations/Harvesters/Artificial.md",
+    "docs/Module implementations/Converters/BQ25570.md",
+    "docs/Module implementations/Converters/BuckBoost.md",
+    "docs/Module implementations/Converters/Diode (converter-less).md",
+    "docs/Module implementations/Converters/LDO.md",
+    "docs/Module implementations/Loads/TaskLoad.md",
+    "docs/index.md",
+    "docs/Module implementations/Loads/JITLoad.md",
+    "docs/Module implementations/Loads/JITLoadAdvanced.md",
+    "docs/Figures/Architecture.PNG",
+    "docs/Figures/TaskLoad.PNG",
+    "docs/Description/Implementation details.md",
+    "docs/Module implementations/Loads/ConstantLoad.md",
+    "docs/Description/Module implementations.md"
+  ]
+}

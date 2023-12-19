@@ -30,7 +30,7 @@ class IVCurve:
         #TODO: make loading of iv curve properly!
         self.iv_file = config['file']
         self.lux = config['lux'] if 'lux' in config else 0
-        self.log_full = config['log'] if 'log' in config else True
+        self.log_full = config['log'] if 'log' in config else False
         self.time_max = math.inf
             
     def reset(self, initial_voltage):

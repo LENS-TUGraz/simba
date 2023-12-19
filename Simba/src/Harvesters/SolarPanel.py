@@ -4,7 +4,9 @@ Harvester module implementation:
 
 Solar panel
 
-TODO: description
+The `SolarPanel` module allows to use long-term real-world solar energy harvesting traces in simulation, by including
+- a [PV cell model](https://www.mdpi.com/1996-1073/9/5/326) that can be configured according to parameters that are typically available in datasheets, and
+- real-world solar irradiance traces from existing datasets (e.g., [NREL](https://midcdmz.nrel.gov/apps/sitehome.pl?site=BMS) for outdoor and [ENHANTS](https://enhants.ee.columbia.edu/indoor-irradiance-meas) for indoor environments).
 """
 
 import pandas as pd
@@ -22,10 +24,8 @@ class SolarPanel:
             print("Create Solar Panel Source.")
         
         self.time_base = time_base
-        self.log_full = config['log'] if 'log' in config else True
-        self.data_type = config['data_type']
+        self.log_full = config['log'] if 'log' in config else False
         self.next_update = 0
-        
         
         self.t_start = config['t_start'] if 't_start' in config else None
         self.t_max = config['t_max'] if 't_max' in config else None

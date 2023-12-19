@@ -4,7 +4,9 @@ Load module implementation:
 
 TaskLoad
 
-TODO: description
+The `TaskLoad` module describes a load that runs several tasks in a round-robin fashion. 
+The tasks, their length, as well as their power consumption can be configured arbitrarily. 
+The load further has a minimum operating voltage that is implemented as a hysteresis.
 """
 
 from aenum import Enum, extend_enum
