@@ -1,21 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jan 25 09:33:50 2023
-
-@author: hannib
+Convert raw irradiance traces to Simba 'SolarPanel' compatible format
 """
-
-folder_source = 'NREL' #folder including 'raw data' (from datasets)
-folder_dest = '.'      #folder where processed data should be stored
-
-data_set = 'NREL'      #type of data; currently supported: NREL, ENHANTS 
 
 import pandas as pd
 import os
 import datetime
 import json
-
 from pathlib import Path
+
+data_set = 'NREL'      #type of data; currently supported: NREL, ENHANTS 
+
+folder_source = f'{data_set}/Raw' #folder including 'raw data' (from datasets)
+folder_dest = f'{data_set}'   #folder where processed data should be stored
         
 enhants_columns = {'sec'  : int,
                     'irr,microW/cm^2' : float,
@@ -58,7 +55,7 @@ for file in os.listdir(folder_source):
         
     elif data_set == 'NREL':
         
-        df = pd.read_csv(os.path.join(folder_source, file), delimiter=',', names=['day', 'time', 'irradiance'], parse_dates={'timestamp':['day', 'time']}, infer_datetime_format=True)
+        df = pd.read_csv(os.path.join(folder_source, file), delimiter=',', skiprows=1, names=['day', 'time', 'irradiance'], parse_dates={'timestamp':['day', 'time']}, infer_datetime_format=True)
         df['irradiance'] = df.irradiance.apply(lambda x : 0 if x < 0 else x)
         df['sec'] = df.timestamp.apply(lambda x : int((x - df.timestamp.iloc[0]).total_seconds()))
         df['day_nr'] = df['sec'].apply(lambda x : int(x/(60*60*24)))
