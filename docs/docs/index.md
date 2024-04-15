@@ -1,7 +1,7 @@
 
 ## Simba: Simulation Framework for Battery-Free Systems
 
-*Simba* is an open-source simulation framework that allows to explore and facilitate the design of battery-free systems.
+*Simba* is an open-source simulation framework that allows to explore and facilitate the design of battery-free systems and is freely available on [Github](https://github.com/LENS-TUGraz/simba/tree/master).
 
 The design of battery-free systems (i.e., embedded devices powered by energy harvesters) is complex, as these devices cover a huge design space, exhibit non-trivial energy-driven dependencies between their different components, and are typically hard to debug, verify, evaluate, and compare.
 

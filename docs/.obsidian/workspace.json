@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "082c1be628f6b847",
+    "id": "f4ddccdc5c10d64a",
     "type": "split",
     "children": [
       {
-        "id": "543e5bc00481168b",
+        "id": "96ec2ec6e56af47b",
         "type": "tabs",
         "children": [
           {
-            "id": "4843b822cdb73c5d",
+            "id": "744da360eff38c8f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Module implementations/Harvesters/SolarPanel.md",
+                "file": "docs/Module implementations/Loads/JITLoad.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "361ecec8ed80d9e8",
+    "id": "a979f65ba71fac38",
     "type": "split",
     "children": [
       {
-        "id": "575ede921508d8ad",
+        "id": "00a5f6bf1f48336a",
         "type": "tabs",
         "children": [
           {
-            "id": "bba1db1c4ae1bc4a",
+            "id": "69133b3c9905556c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,22 +43,30 @@
             }
           },
           {
-            "id": "3c4f79e20692ed6b",
+            "id": "f59393b0fac6ec34",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
                 "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
+                "explainSearch": true,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "82a5050cd417edaa",
+            "id": "4e6569171f0e57d4",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "6ff12096cd0d38ef",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,20 +80,20 @@
     "width": 300
   },
   "right": {
-    "id": "c34c4e7b3e7a1246",
+    "id": "3ef2ecf47c57c5c6",
     "type": "split",
     "children": [
       {
-        "id": "0dcee20805e96405",
+        "id": "80303bc51e82f782",
         "type": "tabs",
         "children": [
           {
-            "id": "7d7bc6ec58f45476",
+            "id": "47d68191de2e176e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Module implementations/Harvesters/SolarPanel.md",
+                "file": "docs/Module implementations/Loads/JITLoad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +105,19 @@
             }
           },
           {
-            "id": "246a1a32e720e56b",
+            "id": "38fa93a6b0d4036a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Module implementations/Harvesters/SolarPanel.md",
+                "file": "docs/Module implementations/Loads/JITLoad.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "72f63c464e3f5b4e",
+            "id": "9a522ac3b0283dc8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,16 +128,17 @@
             }
           },
           {
-            "id": "91e546700c117fff",
+            "id": "ed2d0d4f6e9bb5fb",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Module implementations/Harvesters/SolarPanel.md"
+                "file": "docs/Module implementations/Loads/JITLoad.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -146,24 +155,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4843b822cdb73c5d",
+  "active": "744da360eff38c8f",
   "lastOpenFiles": [
+    "docs/index.md",
+    "docs/Description/Implementation details.md",
+    "docs/Module implementations/Converters/BQ25570.md",
+    "docs/Module implementations/Loads/JITLoad.md",
+    "docs/Figures/Icon.png",
+    "docs/Figures/Logo.png",
+    "docs/Module implementations/Loads/JITLoadAdvanced.md",
+    "docs/Module implementations/Loads/TaskLoad.md",
+    "docs/Figures/JITLoadSimple.PNG",
+    "docs/Module implementations/Loads/ConstantLoad.md",
     "docs/Module implementations/Harvesters/IVCurve.md",
+    "docs/Module implementations/Harvesters/Artificial.md",
+    "Readme.md",
+    "Module implementations/Loads/ConstantLoad.md",
+    "requirements.txt",
+    "mkdocs.yml",
     "docs/Module implementations/Harvesters/TEG.md",
     "docs/Module implementations/Harvesters/SolarPanel.md",
-    "docs/Module implementations/Harvesters/Artificial.md",
-    "docs/Module implementations/Converters/BQ25570.md",
-    "docs/Module implementations/Converters/BuckBoost.md",
-    "docs/Module implementations/Converters/Diode (converter-less).md",
+    "docs/Module implementations/Capacitors/TantulumCapacitor.md",
+    "docs/Module implementations/Capacitors/IdealCapacitor.md",
     "docs/Module implementations/Converters/LDO.md",
-    "docs/Module implementations/Loads/TaskLoad.md",
-    "docs/index.md",
-    "docs/Module implementations/Loads/JITLoad.md",
-    "docs/Module implementations/Loads/JITLoadAdvanced.md",
-    "docs/Figures/Architecture.PNG",
+    "docs/Module implementations/Converters/Diode (converter-less).md",
+    "docs/Module implementations/Converters/BuckBoost.md",
+    "docs/Figures/Tradeoff-Exploration.png",
     "docs/Figures/TaskLoad.PNG",
-    "docs/Description/Implementation details.md",
-    "docs/Module implementations/Loads/ConstantLoad.md",
-    "docs/Description/Module implementations.md"
+    "docs/Figures/Simulation.PNG",
+    "docs/Figures/Example1b.png",
+    "docs/Figures/JITLoad.PNG",
+    "docs/Figures/Example1a.png",
+    "docs/Figures/Architecture.PNG",
+    "docs/javascripts/mathjax.js",
+    "docs/Module implementations/Harvesters",
+    "docs/Module implementations/Capacitors",
+    "docs/Module implementations/Loads",
+    "docs/Module implementations/Converters",
+    "docs/Description/Trade-off exploration.md",
+    "docs/Description/Simulation principle.md",
+    "docs/Description/Module implementations.md",
+    "docs/Figures",
+    "docs/javascripts",
+    "docs/Module implementations",
+    "Module implementations/Loads/TaskLoad.md",
+    "Module implementations/Loads/JITLoadAdvanced.md",
+    "Module implementations/Loads/JITLoad.md",
+    "Description/Implementation details.md",
+    "Untitled.canvas"
   ]
 }

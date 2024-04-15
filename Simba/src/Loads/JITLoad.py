@@ -4,7 +4,14 @@ Load module implementation:
 
 JITLoad
 
-TODO: description
+The `JITLoad` module describes a load that uses a *Just-In-Time checkpointing* (JIT) approach 
+to operate in the presence of power-failures (i.e., intermittently) according to the 
+implementation in this [paper][https://dl.acm.org/doi/abs/10.1145/3411839].
+
+The device starts performs periodic *checkpointing* (with a specific period, length, and current consumption), 
+once the capacitor voltage passes a certain threshold ($V_{Chkpt}$), turns off at $V_{OFF}$ and 
+*restores* the checkpoints after recharging to $V_{ON}$ (with a specific period, length, and current consumption). 
+In between, while *computing*, the device consumes a configurable constant current.
 """
 
 from aenum import Enum

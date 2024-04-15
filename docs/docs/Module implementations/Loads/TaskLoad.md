@@ -1,6 +1,6 @@
 ### Description 
 
-The `TaskLoad` module describes a load that runs several tasks in a round-robin fashion. The tasks, their length, as well as their power consumption can be configured arbitrarily. As they can be modelled as fine-grained as required, the `TaskLoad` module allows to cover a wide range of different sensor node applications. The load further has a minimum operating voltage that is implemented as a hysteresis.
+The `TaskLoad` module describes a load that runs several tasks in a round-robin fashion (see Figure below). The tasks, their length, as well as their power consumption can be configured arbitrarily. As they can be modelled as fine-grained as required, the `TaskLoad` module allows to cover a wide range of different sensor node applications. The load further has a minimum operating voltage that is implemented as a hysteresis.
 
 ![Architecture](./../../Figures/TaskLoad.PNG)
 
