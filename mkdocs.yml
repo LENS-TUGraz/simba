@@ -1,5 +1,5 @@
 site_name: Simba
-site_url: https://simbaframework.github.io/simba/
+site_url: https://lens-tugraz.github.io/simba/
 repo_url: https://github.com/LENS-TUGraz/simba
 site_description: Documentation of Simba simulator
 docs_dir: ./docs/docs
@@ -28,6 +28,8 @@ theme:
         
     logo: Figures/Logo.png
     favicon: Figures/Icon.png
+    icon:
+        repo: fontawesome/brands/github
 
 
     features:
