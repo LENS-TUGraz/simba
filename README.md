@@ -1,4 +1,5 @@
-# *Simba*: Batteryfree-node-simulator
+![Simba logo](https://github.com/LENS-TUGraz/simba/raw/master/docs/docs/Figures/Title.png)
+# Simulation framework for battery-free devices
 
 This repo contains the *Simba* simulation framework, including its source code, tools, example simulations, and documentation files.
 

@@ -1,6 +1,7 @@
 site_name: Simba
 site_dir: private
 docs_dir: ./docs
+repo_url: https://github.com/LENS-TUGraz/simba
 
 theme:
     name: 'material'
@@ -24,8 +25,8 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
         
-    logo: ./docs/Figures/Logo.png
-    favicon: ./docs/Figures/Icon.png
+    logo: Figures/Logo.png
+    favicon: Figures/Icon.png
 
         
     features:
