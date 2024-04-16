@@ -17,7 +17,7 @@ The repo will be extended (e.g., with docu and more examples etc.) throughout th
 | docs | Simba's documentation source files |
 
 ## Documentation
-More details about the implementation and the available modules can be found in *Simba*'s documentation at: https://simbaframework.github.io/simba/
+More details about the implementation and the available modules can be found in *Simba*'s documentation at: https://lens-tugraz.github.io/simba/
 
 ## Using *Simba*
 

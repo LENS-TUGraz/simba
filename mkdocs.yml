@@ -25,8 +25,8 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
         
-    logo: docs/docs/Figures/Logo.png
-    favicon: docs/docs/Figures/Icon.png
+    logo: ./docs/docs/Figures/Logo.png
+    favicon: ./docs/docs/Figures/Icon.png
 
 
     features:
