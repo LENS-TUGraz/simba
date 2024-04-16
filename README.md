@@ -2,10 +2,6 @@
 
 This repo contains the *Simba* simulation framework, including its source code, tools, example simulations, and documentation files.
 
-## General
-This repo is still in progress, but already contains a complete and working version of the Simba simulation framework along with several example simulations.
-The repo will be extended (e.g., with docu and more examples etc.) throughout the next weeks.
-
 ### Folder structure
 
 | **Folder** | **Description** |
